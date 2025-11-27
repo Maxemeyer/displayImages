@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>displayImages</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <h1>thumbnailCarousel</h1>
+    <div class="thumbnailCarousel">
+      <div id="bigPicture"></div>
+      <div id="smallPictures">
+        <input type="radio" name="smallPictures" id="red" aria-label="redRadioButton"  onclick="changeBigPicture('red')" checked>
+        <input type="radio" name="smallPictures" id="blue" aria-label="blueRadioButton" onclick="changeBigPicture('blue')">
+        <input type="radio" name="smallPictures" id="green" aria-label="greenRadioButton" onclick="changeBigPicture('green')">
+        <input type="radio" name="smallPictures" id="yellow" aria-label="yellowRadioButton" onclick="changeBigPicture('yellow')">
+        <input type="radio" name="smallPictures" id="pink" aria-label="pinkRadioButton" onclick="changeBigPicture('pink')">
+        <input type="radio" name="smallPictures" id="purple" aria-label="purpleRadioButton" onclick="changeBigPicture('purple')">
+      </div>
+    </div>
+
+    <h1>imageSlider no loop</h1>
+    <div class="imageSlider">
+      <button id="subtractNoLoop" onclick="changeIndex_noLoop(-1)" disabled>-</button>
+      <div class="displayedPicture" id="noLoop"></div>
+      <button id="addNoLoop" onclick="changeIndex_noLoop(1)">+</button>
+    </div>
+
+    <h1>imageSlider loop</h1>
+    <div class="imageSlider">
+      <button id="subtractLoop" onclick="changeIndex_loop(-1)">-</button>
+      <div class="displayedPicture" id="loop"></div>
+      <button id="addLoop" onclick="changeIndex_loop(1)">+</button>
+    </div>
+  </body>
+</html>
