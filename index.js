@@ -1,6 +1,11 @@
-const images = ["images/image1big.jpg", "images/image2big.jpg", "images/image3big.jpg", "images/image4big.jpg", "images/image5big.jpg", "images/image6big.jpg"];
+const images = ["images/image1.webp", "images/image2.webp", "images/image3.webp", "images/image4.webp", "images/image5.webp", "images/image6.webp"];
 let imagesIndexNoLoop = 0;
 let imagesIndexLoop = 0;
+
+// preload Images for better performance
+/*images.forEach(img => {
+    new Image().src = img;
+});*/
 
 function changeBigPicture(url) {
     let bigPicture = document.getElementById("bigPicture");
