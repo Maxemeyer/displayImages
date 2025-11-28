@@ -1,19 +1,19 @@
-const colors = ["red", "blue", "green", "yellow", "pink", "purple"];
-let colorIndexNoLoop = 0;
-let colorIndexLoop = 0;
+const images = ["images/image1big.jpg", "images/image2big.jpg", "images/image3big.jpg", "images/image4big.jpg", "images/image5big.jpg", "images/image6big.jpg"];
+let imagesIndexNoLoop = 0;
+let imagesIndexLoop = 0;
 
-function changeBigPicture(color) {
+function changeBigPicture(url) {
     let bigPicture = document.getElementById("bigPicture");
-    bigPicture.style.background = color;
+    bigPicture.style.backgroundImage = "url('" + url + "')";
 }
 
 function changeIndex_noLoop(byValue) {
-    colorIndexNoLoop = colorIndexNoLoop + byValue;
-    document.getElementById("noLoop").style.backgroundColor = colors[colorIndexNoLoop];
+    imagesIndexNoLoop = imagesIndexNoLoop + byValue;
+    document.getElementById("noLoop").style.backgroundImage = "url('" + images[imagesIndexNoLoop] + "')";
 
-    if (colorIndexNoLoop === 0) {
+    if (imagesIndexNoLoop === 0) {
         document.getElementById("subtractNoLoop").disabled = true;
-    } else if (colorIndexNoLoop === colors.length - 1) {
+    } else if (imagesIndexNoLoop === images.length - 1) {
         document.getElementById("addNoLoop").disabled = true;
     } else {
         document.getElementById("subtractNoLoop").disabled = false;
@@ -22,13 +22,13 @@ function changeIndex_noLoop(byValue) {
 }
 
 function changeIndex_loop(byValue) {
-    colorIndexLoop = colorIndexLoop + byValue;
+    imagesIndexLoop = imagesIndexLoop + byValue;
 
-    if (colorIndexLoop > colors.length - 1) {
-        colorIndexLoop = 0;
-    } else if (colorIndexLoop < 0) {
-        colorIndexLoop = colors.length - 1;
+    if (imagesIndexLoop > images.length - 1) {
+        imagesIndexLoop = 0;
+    } else if (imagesIndexLoop < 0) {
+        imagesIndexLoop = images.length - 1;
     }
 
-    document.getElementById("loop").style.backgroundColor = colors[colorIndexLoop];
+    document.getElementById("loop").style.backgroundImage = "url('" + images[imagesIndexLoop] + "')";
 }
