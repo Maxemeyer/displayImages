@@ -19,7 +19,7 @@ h1 {
 #bigPicture {
     height: 540px;
     width: 960px;
-    background-image: url('images/image1big.jpg');
+    background-image: url('images/image1.webp');
     background-size: cover;
     border-radius: 16px;
     transition: background-image 0.3s;
@@ -53,27 +53,27 @@ input:checked {
 }
 
 #image1 {
-    background-image: url("images/image1small.jpg");
+    background-image: url("images/image1.webp");
 }
 
 #image2 {
-    background-image: url("images/image2small.jpg");
+    background-image: url("images/image2.webp");
 }
 
 #image3 {
-    background-image: url("images/image3small.jpg");
+    background-image: url("images/image3.webp");
 }
 
 #image4 {
-    background-image: url("images/image4small.jpg");
+    background-image: url("images/image4.webp");
 }
 
 #image5 {
-    background-image: url("images/image5small.jpg");
+    background-image: url("images/image5.webp");
 }
 
 #image6 {
-    background-image: url("images/image6small.jpg");
+    background-image: url("images/image6.webp");
 }
 
 .imageSlider {
@@ -85,7 +85,7 @@ input:checked {
 }
 
 .displayedPicture {
-    background-image: url("images/image1big.jpg");
+    background-image: url("images/image1.webp");
     background-size: cover;
     border-radius: 10px;
     transition: background-image 0.3s;
