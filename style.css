@@ -19,9 +19,10 @@ h1 {
 #bigPicture {
     height: 540px;
     width: 960px;
-    background-color: red;
+    background-image: url('images/image1big.jpg');
+    background-size: cover;
     border-radius: 16px;
-    transition: background-color 0.3s;
+    transition: background-image 0.3s;
 }
 
 #smallPictures {
@@ -38,9 +39,11 @@ input {
     appearance: none;
     border-radius: 10px;
     transition: opacity 0.3s;
+    background-size: cover;
 }
 input:hover {
     opacity: 0.8;
+    cursor: pointer;
 }
 input:active {
     opacity: 0.6;
@@ -49,28 +52,28 @@ input:checked {
     border: 2px solid black;
 }
 
-#red {
-    background-color: red;
+#image1 {
+    background-image: url("images/image1small.jpg");
 }
 
-#blue {
-    background-color: blue;
+#image2 {
+    background-image: url("images/image2small.jpg");
 }
 
-#green {
-    background-color: green;
+#image3 {
+    background-image: url("images/image3small.jpg");
 }
 
-#yellow {
-    background-color: yellow;
+#image4 {
+    background-image: url("images/image4small.jpg");
 }
 
-#pink {
-    background-color: pink;
+#image5 {
+    background-image: url("images/image5small.jpg");
 }
 
-#purple {
-    background-color: purple;
+#image6 {
+    background-image: url("images/image6small.jpg");
 }
 
 .imageSlider {
@@ -82,13 +85,35 @@ input:checked {
 }
 
 .displayedPicture {
-    background-color: red;
+    background-image: url("images/image1big.jpg");
+    background-size: cover;
     border-radius: 10px;
-    transition: background-color 0.3s;
+    transition: background-image 0.3s;
 }
 
 button {
     border-radius: 10px;
     background-color: white;
     border: solid 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s, stroke 0.3s;
+}
+
+button:not(:disabled):hover .arrow{
+    opacity: 0.8;
+}
+button:not(:disabled):active .arrow {
+    opacity: 0.6;
+}
+button:disabled .arrow {
+    stroke: grey;
+}
+
+.arrow {
+    fill: none;
+    stroke: black;
+    stroke-width: 4px;
+    stroke-linecap: round;
 }
