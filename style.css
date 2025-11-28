@@ -21,6 +21,7 @@ h1 {
     width: 960px;
     background-image: url('images/image1.webp');
     background-size: cover;
+    background-position: center center;
     border-radius: 16px;
     transition: background-image 0.3s;
 }
@@ -117,3 +118,4 @@ button:disabled .arrow {
     stroke-width: 4px;
     stroke-linecap: round;
 }
+
