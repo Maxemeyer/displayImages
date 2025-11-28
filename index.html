@@ -13,27 +13,43 @@
     <div class="thumbnailCarousel">
       <div id="bigPicture"></div>
       <div id="smallPictures">
-        <input type="radio" name="smallPictures" id="red" aria-label="redRadioButton"  onclick="changeBigPicture('red')" checked>
-        <input type="radio" name="smallPictures" id="blue" aria-label="blueRadioButton" onclick="changeBigPicture('blue')">
-        <input type="radio" name="smallPictures" id="green" aria-label="greenRadioButton" onclick="changeBigPicture('green')">
-        <input type="radio" name="smallPictures" id="yellow" aria-label="yellowRadioButton" onclick="changeBigPicture('yellow')">
-        <input type="radio" name="smallPictures" id="pink" aria-label="pinkRadioButton" onclick="changeBigPicture('pink')">
-        <input type="radio" name="smallPictures" id="purple" aria-label="purpleRadioButton" onclick="changeBigPicture('purple')">
+        <input type="radio" name="smallPictures" id="image1" aria-label="image1RadioButton"  onclick="changeBigPicture('images/image1big.jpg')" checked>
+        <input type="radio" name="smallPictures" id="image2" aria-label="image2RadioButton" onclick="changeBigPicture('images/image2big.jpg')">
+        <input type="radio" name="smallPictures" id="image3" aria-label="image3RadioButton" onclick="changeBigPicture('images/image3big.jpg')">
+        <input type="radio" name="smallPictures" id="image4" aria-label="image4RadioButton" onclick="changeBigPicture('images/image4big.jpg')">
+        <input type="radio" name="smallPictures" id="image5" aria-label="image5RadioButton" onclick="changeBigPicture('images/image5big.jpg')">
+        <input type="radio" name="smallPictures" id="image6" aria-label="image6RadioButton" onclick="changeBigPicture('images/image6big.jpg')">
       </div>
     </div>
 
     <h1>imageSlider no loop</h1>
     <div class="imageSlider">
-      <button id="subtractNoLoop" onclick="changeIndex_noLoop(-1)" disabled>-</button>
+      <button id="subtractNoLoop" onclick="changeIndex_noLoop(-1)" disabled>
+        <svg width="50" height="200" viewBox="0 0 50 200">
+          <path class="arrow" d="M 45, 5 L 5, 100 L 45, 195" />
+        </svg>
+      </button>
       <div class="displayedPicture" id="noLoop"></div>
-      <button id="addNoLoop" onclick="changeIndex_noLoop(1)">+</button>
+      <button id="addNoLoop" onclick="changeIndex_noLoop(1)">
+        <svg width="50" height="200" viewBox="0 0 50 200">
+          <path class="arrow" d="M 5, 5 L 45, 100 L 5, 195" />
+        </svg>
+      </button>
     </div>
 
     <h1>imageSlider loop</h1>
     <div class="imageSlider">
-      <button id="subtractLoop" onclick="changeIndex_loop(-1)">-</button>
+      <button id="subtractLoop" onclick="changeIndex_loop(-1)">
+        <svg width="50" height="200" viewBox="0 0 50 200">
+          <path class="arrow" d="M 45, 5 L 5, 100 L 45, 195" />
+        </svg>
+      </button>
       <div class="displayedPicture" id="loop"></div>
-      <button id="addLoop" onclick="changeIndex_loop(1)">+</button>
+      <button id="addLoop" onclick="changeIndex_loop(1)">
+        <svg width="50" height="200" viewBox="0 0 50 200">
+          <path class="arrow" d="M 5, 5 L 45, 100 L 5, 195" />
+        </svg>
+      </button>
     </div>
   </body>
 </html>
