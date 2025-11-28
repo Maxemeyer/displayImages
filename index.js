@@ -2,11 +2,6 @@ const images = ["images/image1.webp", "images/image2.webp", "images/image3.webp"
 let imagesIndexNoLoop = 0;
 let imagesIndexLoop = 0;
 
-// preload Images for better performance
-/*images.forEach(img => {
-    new Image().src = img;
-});*/
-
 function changeBigPicture(url) {
     let bigPicture = document.getElementById("bigPicture");
     bigPicture.style.backgroundImage = "url('" + url + "')";
